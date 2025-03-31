@@ -1,15 +1,11 @@
-**💛 You can help the author become a full-time open-source maintainer by [sponsoring him on GitHub](https://github.com/sponsors/egoist).**
+# Swaps.io Intents SDK
 
----
+[![npm version](https://badgen.net/npm/v/intents-sdk)](https://npm.im/intents-sdk) [![npm downloads](https://badgen.net/npm/dm/intents-sdk)](https://npm.im/intents-sdk)
 
-# my-ts-lib
+## Using this SDK
 
-[![npm version](https://badgen.net/npm/v/my-ts-lib)](https://npm.im/my-ts-lib) [![npm downloads](https://badgen.net/npm/dm/my-ts-lib)](https://npm.im/my-ts-lib)
+- TODO
 
-## Using this template
-
-- Search `my-ts-lib` and replace it with your custom package name.
-- Search `egoist` and replace it with your name.
 
 Features:
 
@@ -23,13 +19,9 @@ To skip CI (GitHub action), add `skip-ci` to commit message. To skip release, ad
 ## Install
 
 ```bash
-npm i my-ts-lib
+npm i intents-sdk
 ```
-
-## Sponsors
-
-[![sponsors](https://sponsors-images.egoist.dev/sponsors.svg)](https://github.com/sponsors/egoist)
 
 ## License
 
-MIT &copy; [EGOIST](https://github.com/sponsors/egoist)
+PRIVATE
