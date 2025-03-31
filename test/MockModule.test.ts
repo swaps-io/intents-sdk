@@ -23,6 +23,14 @@ describe("MockModule", () => {
     assert.equal(quote.estimatedOut, BigInt("990000000000000000")); // 0.99 ETH (1% fee)
     assert.equal(quote.fee, BigInt("10000000000000000")); // 0.01 ETH
     
+    // Test with missing amountIn (should default to 0, then throw)
+    try {
+      await mockModule.quoteIntent(intents[0], {});
+      assert.fail("Should have thrown an error");
+    } catch (error: any) {
+      assert.equal(error.message, "Amount must be greater than 0");
+    }
+    
     // Test with zero input should throw
     try {
       await mockModule.quoteIntent(intents[0], { amountIn: "0" });

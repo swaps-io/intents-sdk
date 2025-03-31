@@ -41,6 +41,31 @@ describe("MockModule2", () => {
     const btcExpectedOut = btcExpectedRawOut - btcExpectedFee;
     
     assert.equal(limitQuote.estimatedOut, btcExpectedOut);
+    
+    // Test with invalid intent ID (to trigger "Unknown intent" error)
+    const invalidIntent = { ...maticIntent, id: "invalid-intent" };
+    try {
+      await mockModule2.quoteIntent(invalidIntent, { amountIn: "1000" });
+      assert.fail("Should have thrown an error");
+    } catch (error: any) {
+      assert.equal(error.message, "Unknown intent");
+    }
+    
+    // Test with zero input
+    try {
+      await mockModule2.quoteIntent(maticIntent, { amountIn: "0" });
+      assert.fail("Should have thrown an error");
+    } catch (error: any) {
+      assert.equal(error.message, "Amount must be greater than 0");
+    }
+    
+    // Test with missing amountIn (should default to 0, then throw)
+    try {
+      await mockModule2.quoteIntent(maticIntent, {});
+      assert.fail("Should have thrown an error");
+    } catch (error: any) {
+      assert.equal(error.message, "Amount must be greater than 0");
+    }
   });
 
   test("getUserPositions filters by chain", async () => {
@@ -70,5 +95,23 @@ describe("MockModule2", () => {
     
     assert.equal(quote.fee, expectedFee);
     assert.equal(quote.estimatedOut, expectedOut);
+    
+    // Test with a non-MockProtocol2 position (to test default case)
+    const nonMockProtocol2Position = {
+      ...position,
+      intent: {
+        ...position.intent,
+        protocol: "OtherProtocol"
+      }
+    };
+    
+    const otherQuote = await mockModule2.quoteClosePosition(nonMockProtocol2Position);
+    
+    // Should be 0.5% fee for other protocols
+    const otherExpectedFee = position.value * BigInt(5) / BigInt(1000);
+    const otherExpectedOut = position.value - otherExpectedFee;
+    
+    assert.equal(otherQuote.fee, otherExpectedFee);
+    assert.equal(otherQuote.estimatedOut, otherExpectedOut);
   });
 });
