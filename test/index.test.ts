@@ -1,6 +1,7 @@
-import { test, assert } from "vitest"
-import { foo } from "../src"
+// This file serves as a barrel import for all tests.
+// Tests have been split into separate files by component
 
-test("simple", () => {
-  assert.equal(foo, "foo")
-})
+// Import all test files to ensure they run as part of the test suite
+import './MockModule.test';
+import './MockModule2.test';
+import './IntentsManager.test';
