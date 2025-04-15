@@ -1,0 +1,70 @@
+[
+  {
+    "_id": {
+      "$oid": "67f60f3195f4985a04c16ede"
+    },
+    "address": "0x182863131F9a4630fF9E27830d945B1413e347E8",
+    "apy": 14.21316,
+    "apyBase": 5.3682,
+    "apyReward": 8.84496,
+    "chainId": 1,
+    "decimals": 18,
+    "logosUri": [],
+    "name": "USDS-1 yVault",
+    "primaryAddress": "0x182863131F9a4630fF9E27830d945B1413e347E8",
+    "project": "yearn",
+    "protocol": "yearn-v3",
+    "symbol": "yvUSDS-1",
+    "tvl": 11121456,
+    "type": "defi",
+    "underlyingTokens": [
+      {
+        "address": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+        "chainId": 1,
+        "decimals": 18,
+        "logosUri": [
+          "https://assets.coingecko.com/coins/images/39926/thumb/usds.webp?1726666683"
+        ],
+        "name": "USDS",
+        "symbol": "USDS",
+        "type": "defi"
+      }
+    ],
+    "tvl_str": "11121456"
+  },
+  {
+    "_id": {
+      "$oid": "67f60f2895f4985a04b56cb4"
+    },
+    "address": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
+    "apy": 10.89399,
+    "apyBase": null,
+    "apyReward": 10.89399,
+    "chainId": 1,
+    "decimals": 18,
+    "logosUri": [
+      "https://assets.coingecko.com/coins/images/39169/thumb/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057"
+    ],
+    "name": "USD0 Liquid Bond",
+    "primaryAddress": "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
+    "project": "usual",
+    "protocol": "usual-earn",
+    "symbol": "USD0++",
+    "tvl": 630761715,
+    "type": "defi",
+    "underlyingTokens": [
+      {
+        "address": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
+        "chainId": 1,
+        "decimals": 18,
+        "logosUri": [
+          "https://assets.coingecko.com/coins/images/38272/thumb/USD0LOGO.png?1716962811"
+        ],
+        "name": "Usual USD",
+        "symbol": "USD0",
+        "type": "base"
+      }
+    ],
+    "tvl_str": "630761715"
+  }
+]
