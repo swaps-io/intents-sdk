@@ -41,7 +41,7 @@ describe("MockModule", () => {
     });
 
     test("getUserPositions returns positions for user", async () => {
-        const positions = await mockModule.getUserPositions(BigInt(1), "0xUser");
+        const positions = await mockModule.getUserPositions(1, "0xUser");
 
         assert.equal(positions.length, 1);
         assert.equal(positions[0].amount, BigInt("500000000000000000")); // 0.5 ETH
@@ -49,7 +49,7 @@ describe("MockModule", () => {
     });
 
     test("quoteClosePosition calculates withdrawal quote", async () => {
-        const positions = await mockModule.getUserPositions(BigInt(1), "0xUser");
+        const positions = await mockModule.getUserPositions(1, "0xUser");
         const position = positions[0];
         const closePositionData = {
             tokenOut: position.intent.tokenIn
