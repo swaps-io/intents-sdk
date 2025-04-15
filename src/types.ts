@@ -71,11 +71,11 @@ export interface OpenPositionData {
 }
 
 export interface ClosePositionData {
-    receiver: string
-    spender: string
+    tokenOut: string // address
     slippage?: number
     minAmountOut?: bigint
-    tokenOut: string // address
+    spender?: string
+    receiver?: string
 }
 
 export interface IntentsModule {
