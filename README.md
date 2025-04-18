@@ -24,4 +24,4 @@ npm i intents-sdk
 
 ## License
 
-PRIVATE
+MIT
