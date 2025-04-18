@@ -9,10 +9,16 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "allowJs": true,
-    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-
-    "types": ["vitest/globals"]
-  }
+    "types": ["vitest/globals"],
+    "paths": {
+      "intents-sdk": ["./src"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
