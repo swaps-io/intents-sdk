@@ -1,13 +1,30 @@
 {
   "name": "intents-sdk",
   "type": "module",
-  "version": "0.0.0",
-  "description": "My awesome typescript library",
+  "version": "0.0.1",
+  "author": "Swaps.io Team",
+  "description": "Swaps.io - Intents SDK",
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "swaps.io",
+    "intents",
+    "sdk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swaps-io/intents-sdk.git"
+  },
+  "homepage": "https://github.com/swaps-io/intents-sdk",
+  "bugs": {
+    "url": "https://github.com/swaps-io/intents-sdk/issues"
+  },
   "files": [
-    "dist"
+    "src",
+    "dist",
+    "README.md",
+    "package.json"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
